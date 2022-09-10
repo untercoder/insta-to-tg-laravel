@@ -4,62 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "b368076b9b54acc47e4b4ef74dd74caa",
+    "content-hash": "c63563f98283f9f1a95815e8ad34bd3c",
     "packages": [
-        {
-            "name": "amirsarhang/instagram-php-sdk",
-            "version": "1.2.3",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/amirsarhang/instagram-php-sdk.git",
-                "reference": "a0a2801db5f379e58c4bb8b0f148d3d793e030a3"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/amirsarhang/instagram-php-sdk/zipball/a0a2801db5f379e58c4bb8b0f148d3d793e030a3",
-                "reference": "a0a2801db5f379e58c4bb8b0f148d3d793e030a3",
-                "shasum": ""
-            },
-            "require": {
-                "facebook/graph-sdk": "^5.7",
-                "php": ">=7.0",
-                "vlucas/phpdotenv": "^5.3"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "Amirsarhang\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Amirhossein Sarhangian",
-                    "email": "ah.sarhangian@gmail.com",
-                    "homepage": "https://github.com/amirsarhang/instagram-php-sdk/"
-                }
-            ],
-            "description": "It's Instagram Graph SDK for PHP. With this package you can easily make all requests to Instagram Graph API, like Auth and CRUD. Also, we will have more methods regularly.",
-            "homepage": "https://github.com/amirsarhang/instagram-php-sdk",
-            "keywords": [
-                "Instagram-Library",
-                "Instagram-PHP",
-                "graph-api",
-                "instagram",
-                "instagram-sdk"
-            ],
-            "support": {
-                "docs": "https://amirsarhang.github.io/instagram-php-sdk/",
-                "issues": "https://github.com/amirsarhang/instagram-php-sdk/issues",
-                "rss": "https://github.com/amirsarhang/instagram-php-sdk/releases.atom",
-                "source": "https://github.com/amirsarhang/instagram-php-sdk.git",
-                "wiki": "https://github.com/amirsarhang/instagram-php-sdk/wiki"
-            },
-            "time": "2022-07-14T15:40:14+00:00"
-        },
         {
             "name": "asm89/stack-cors",
             "version": "v2.1.1",
@@ -175,6 +121,53 @@
                 }
             ],
             "time": "2021-08-15T20:50:18+00:00"
+        },
+        {
+            "name": "cosenary/instagram",
+            "version": "v2.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/cosenary/Instagram-PHP-API.git",
+                "reference": "fbf4c82e2cc7e9a7fd6f9fd7bba1fd2c506102a5"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/cosenary/Instagram-PHP-API/zipball/fbf4c82e2cc7e9a7fd6f9fd7bba1fd2c506102a5",
+                "reference": "fbf4c82e2cc7e9a7fd6f9fd7bba1fd2c506102a5",
+                "shasum": ""
+            },
+            "require": {
+                "ext-curl": "*",
+                "php": ">=5.2.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "MetzWeb\\Instagram\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD"
+            ],
+            "authors": [
+                {
+                    "name": "Christian Metz",
+                    "email": "christian-metz1@gmx.net",
+                    "homepage": "http://metzweb.net"
+                }
+            ],
+            "description": "An easy-to-use PHP Class for accessing Instagram's API.",
+            "homepage": "https://github.com/cosenary/Instagram-PHP-API",
+            "keywords": [
+                "api",
+                "instagram"
+            ],
+            "support": {
+                "issues": "https://github.com/cosenary/Instagram-PHP-API/issues",
+                "source": "https://github.com/cosenary/Instagram-PHP-API/tree/master"
+            },
+            "time": "2014-11-29T13:10:42+00:00"
         },
         {
             "name": "dflydev/dot-access-data",
@@ -546,69 +539,6 @@
                 }
             ],
             "time": "2020-12-29T14:50:06+00:00"
-        },
-        {
-            "name": "facebook/graph-sdk",
-            "version": "5.7.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/facebook/php-graph-sdk.git",
-                "reference": "2d8250638b33d73e7a87add65f47fabf91f8ad9b"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/facebook/php-graph-sdk/zipball/2d8250638b33d73e7a87add65f47fabf91f8ad9b",
-                "reference": "2d8250638b33d73e7a87add65f47fabf91f8ad9b",
-                "shasum": ""
-            },
-            "require": {
-                "php": "^5.4|^7.0"
-            },
-            "require-dev": {
-                "guzzlehttp/guzzle": "~5.0",
-                "mockery/mockery": "~0.8",
-                "phpunit/phpunit": "~4.0"
-            },
-            "suggest": {
-                "guzzlehttp/guzzle": "Allows for implementation of the Guzzle HTTP client",
-                "paragonie/random_compat": "Provides a better CSPRNG option in PHP 5"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "5.x-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Facebook\\": "src/Facebook/"
-                },
-                "files": [
-                    "src/Facebook/polyfills.php"
-                ]
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "Facebook Platform"
-            ],
-            "authors": [
-                {
-                    "name": "Facebook",
-                    "homepage": "https://github.com/facebook/php-graph-sdk/contributors"
-                }
-            ],
-            "description": "Facebook SDK for PHP",
-            "homepage": "https://github.com/facebook/php-graph-sdk",
-            "keywords": [
-                "facebook",
-                "sdk"
-            ],
-            "support": {
-                "issues": "https://github.com/facebook/php-graph-sdk/issues",
-                "source": "https://github.com/facebook/php-graph-sdk/tree/5.7.0"
-            },
-            "abandoned": true,
-            "time": "2018-12-11T22:56:31+00:00"
         },
         {
             "name": "fruitcake/laravel-cors",

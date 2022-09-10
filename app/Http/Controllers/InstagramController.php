@@ -8,6 +8,6 @@ use App\Instagram\MakeAuthUrl;
 class InstagramController extends Controller
 {
     public function auth() {
-        return (new MakeAuthUrl())->getUrl();
+        return redirect((new MakeAuthUrl())->getUrl());
     }
 }
