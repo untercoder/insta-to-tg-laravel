@@ -1,8 +1,10 @@
 <?php
 
+use App\Http\Controllers\InstagramController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Http\Request;
 use App\Models\TestData;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -26,3 +28,5 @@ Route::get('/db', function (Request $request) {
 
     return "Hello ".$request->get('name');
 });
+
+Route::get('/auth', [InstagramController::class, 'auth']);
