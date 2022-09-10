@@ -19,5 +19,5 @@ Route::get('/', function () {
 
 Route::get('/db', function (Request $request) {
     dd($request);
-    return "Im work";
+    return $request['name'];
 });
