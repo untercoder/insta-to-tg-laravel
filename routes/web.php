@@ -18,6 +18,5 @@ Route::get('/', function () {
 });
 
 Route::get('/db', function (Request $request) {
-    dd($request->get('name'));
-    return $request['name'];
+    return "Hello ".$request->get('name');
 });
