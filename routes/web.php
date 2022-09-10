@@ -16,6 +16,6 @@ use App\Models\TestData;
 |
 */
 
-Route::get('/{code}', [InstagramController::class, 'authInstagram']);
+Route::get('/', [InstagramController::class, 'authInstagram']);
 
 Route::get('/auth', [InstagramController::class, 'redirectInstagram']);
