@@ -4,7 +4,7 @@ namespace App\Instagram;
 
 use MetzWeb\Instagram\Instagram;
 
-class MakeAuthUrl
+class InstagramTolsBox
 {
     private Instagram $instagram;
 
@@ -13,7 +13,7 @@ class MakeAuthUrl
         $this->instagram = new Instagram([
             'apiKey'      => env('FACEBOOK_APP_ID'),
             'apiSecret'   => env('FACEBOOK_APP_SECRET'),
-            'apiCallback' => env('INSTAGRAM_CALLBACK_URL')
+            'apiCallback' => env('INSTAGRAM_CALLBACK_URL'),
         ]);
     }
 

@@ -20,13 +20,4 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/db', function (Request $request) {
-
-    $testData = new TestData();
-    $testData->name = $request->get('name');
-    $testData->save();
-
-    return "Hello ".$request->get('name');
-});
-
-Route::get('/auth', [InstagramController::class, 'auth']);
+Route::get('/auth', [InstagramController::class, 'redirectInstagram']);
