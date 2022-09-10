@@ -19,6 +19,6 @@ class MakeAuthUrl
 
     public function getUrl(): string
     {
-        return $this->instagram->getLoginUrl();
+        return $this->instagram->getLoginUrl()."&scope=user_profile,user_media";
     }
 }
