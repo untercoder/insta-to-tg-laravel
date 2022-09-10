@@ -21,4 +21,11 @@ class InstagramTolsBox
     {
         return $this->instagram->getLoginUrl()."&scope=user_profile,user_media";
     }
+
+    public function getToken($code) {
+        return  $this->instagram->getOAuthToken($code);
+
+    }
+
+
 }

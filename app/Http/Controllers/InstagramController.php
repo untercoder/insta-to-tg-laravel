@@ -18,7 +18,7 @@ class InstagramController extends Controller
         return redirect($this->instagram->getUrl());
     }
 
-    public function authInstagram() {
-        return 0;
+    public function authInstagram($code) {
+        return $this->instagram->getToken($code);
     }
 }
