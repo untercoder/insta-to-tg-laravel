@@ -24,6 +24,6 @@ class InstagramController extends Controller
         $instagram = $this->instagramTools->getInstObj();
         $data = $instagram->getOAuthToken($request->get('code'));
         $instagram->setAccessToken($data);
-        return $instagram->getUser();
+        dd($instagram->getUser());
     }
 }
