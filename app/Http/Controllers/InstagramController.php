@@ -19,6 +19,7 @@ class InstagramController extends Controller
     }
 
     public function authInstagram(Request $request) {
-        return $this->instagram->getToken($request->get('code'));
+        $profile = $this->instagram->getToken($request->get('code'));
+        return $profile->user;
     }
 }
