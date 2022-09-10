@@ -4,7 +4,7 @@ namespace App\Instagram;
 
 use MetzWeb\Instagram\Instagram;
 
-class InstagramTolsBox
+class InstagramToolsBox
 {
     private Instagram $instagram;
 
@@ -17,15 +17,11 @@ class InstagramTolsBox
         ]);
     }
 
-    public function getUrl(): string
-    {
+    public function getInstObj() {
+       return $this->instagram;
+    }
+
+    public function getUrl() {
         return $this->instagram->getLoginUrl()."&scope=user_profile,user_media";
     }
-
-    public function getToken($code) {
-        return  $this->instagram->getOAuthToken($code);
-
-    }
-
-
 }
