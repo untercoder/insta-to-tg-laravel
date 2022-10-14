@@ -2,9 +2,10 @@
 
 namespace App\Instagram;
 
+use Illuminate\Http\Request;
 use MetzWeb\Instagram\Instagram;
 
-class InstagramToolsBox
+class InstagramClient
 {
     private Instagram $instagram;
 
@@ -17,11 +18,20 @@ class InstagramToolsBox
         ]);
     }
 
-    public function getInstObj() {
-       return $this->instagram;
+    public function authInstagram(Request $request)
+    {
+        $instagram = $this->instagram;
+        $data = $instagram->getOAuthToken($request->get('code'));
+        $instagram->setAccessToken($data);
+        dd($instagram->getUser());
     }
 
-    public function getUrl() {
+    public function makeInstallLink() {
+        return $this->instagram->getLoginUrl();
+    }
+
+    public function getUrl()
+    {
         return $this->instagram->getLoginUrl()."&scope=user_profile,user_media";
     }
 }

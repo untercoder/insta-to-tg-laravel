@@ -5,5 +5,6 @@
     </head>
     <body class="antialiased">
         <h1>Hello</h1>
+        <link href="{{$install_link}}">
     </body>
 </html>

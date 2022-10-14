@@ -16,6 +16,8 @@ use App\Models\TestData;
 |
 */
 
-Route::get('/', [InstagramController::class, 'authInstagram']);
+Route::get('/', [\App\Http\Controllers\BaseAppController::class, 'install']);
 
-Route::get('/auth', [InstagramController::class, 'redirectInstagram']);
+//Route::get('/install', [InstagramController::class, 'authInstagram']);
+
+//Route::get('/auth', [InstagramController::class, 'redirectInstagram']);
