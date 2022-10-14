@@ -3,15 +3,15 @@
 namespace App\Instagram;
 
 use Illuminate\Http\Request;
-use MetzWeb\Instagram\Instagram;
+use App\Instagram\InstagramValid;
 
 class InstagramClient
 {
-    private Instagram $instagram;
+    private InstagramValid $instagram;
 
     public function __construct()
     {
-        $this->instagram = new Instagram([
+        $this->instagram = new InstagramValid([
             'apiKey'      => env('FACEBOOK_APP_ID'),
             'apiSecret'   => env('FACEBOOK_APP_SECRET'),
             'apiCallback' => env('INSTAGRAM_CALLBACK_URL'),
@@ -27,11 +27,6 @@ class InstagramClient
     }
 
     public function makeInstallLink() {
-        return $this->instagram->getLoginUrl();
-    }
-
-    public function getUrl()
-    {
-        return $this->instagram->getLoginUrl()."&scope=user_profile,user_media";
+        $this->instagram->getLoginUrl();
     }
 }
