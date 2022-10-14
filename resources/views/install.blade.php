@@ -5,6 +5,6 @@
     </head>
     <body class="antialiased">
         <h1>Hello</h1>
-        <link href="{{$install_link}}">
+        <a href="{{$install_link}}">Install app!</a>
     </body>
 </html>
