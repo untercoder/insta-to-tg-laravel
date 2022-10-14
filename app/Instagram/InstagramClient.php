@@ -27,6 +27,6 @@ class InstagramClient
     }
 
     public function makeInstallLink() {
-        $this->instagram->getLoginUrl(array('user_profile','user_media'));
+        return $this->instagram->getLoginUrl(array('user_profile','user_media'));
     }
 }
